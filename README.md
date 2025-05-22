@@ -5,13 +5,14 @@ An anonymous implementation of a modular encoding method (“Z-encoding”) and 
 ## Description
 
 This repository contains:
+loopdetectordata folder includes loop detector data downloaded from https://catalog.data.gov/dataset/seattle-20-second-freeway and processed as volume and density, and game schedule data. 
 
-- **Z-Encoding**: A puzzle-based encoding technique that captures spatial, temporal, and adjacency features of traffic shockwave diagrams in a structured, modular vector.  
-- **Sparse LSTM**: A recurrent neural network built with diagonal-block trainable weight matrices that leverage the physical meaning of each module to improve training efficiency, interpretability, and generalization.  
-- **Experiments**: evaluation on the publicly available Seattle loop-detector dataset (2011).
+Puzzle/Pixel based encoding generation file: generate shockwave diagrams from loop detector data and then encoded as LSTM input using puzzle/pixel based scheme. 
 
+Z_LSTM file: feeds the puzzle-based encoding results to vanilla LSTM to train and test.
+X_9by12 file: feeds the pixel-based (9by12 resolution) encoding results to vanilla LSTM to train and test.
+Sparse_LSTM file: Sparse_LSTM module to replace vanilla LSTM
 
-
-
+Plot heatmap and violin plot, oneday_average day performance visualization files: performance visualization. 
 
 This code is released under the MIT License.
