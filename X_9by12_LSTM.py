@@ -2,7 +2,6 @@
 """
 Created on Mon Mar 11 16:01:27 2024
 
-@author: cpu1
 """
 # load package and data
 import pandas as pd
